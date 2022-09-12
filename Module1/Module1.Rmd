@@ -9,6 +9,17 @@ library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## Welcome
+
+Welcome this module on making research open. My name is Peter Reimann and I'll be your guide through this topic. 
+
+Best to get started with a short video: 
+
+![](https://www.youtube.com/watch?v=iE7N3jgF4nU)
+
+A great idea, you might say! But what about...and about...? You will have some concerns. 
+
+
 ## Concerns
 
 Open research means in particular open data: 
@@ -17,10 +28,15 @@ Open research means in particular open data:
 
 A. Legally open: that is, available under an open (data) license that permits anyone freely to access, reuse and redistribute
 
-B. Technically open: that is, that the data be available for no more than the cost of reproduction and in machine-readable and bulk form.” (Open Data Handbook)
+B. Technically open: that is, that the data be available for no more than the cost of reproduction and in machine-readable and bulk form.” 
+[Open Data Handbook](http://opendatahandbook.org/glossary/en/terms/open-data/)
+
+What does machine-readable mean?
+
+![](https://www.youtube.com/watch?v=frPFDAvc15Q)
 
 
-```{r quiz01}
+```{r concerns}
 quiz(
   question("What concerns would you have concerning sharing data from your research?",
     answer("What does stop others from plagiarising my data?", correct = TRUE),
@@ -30,66 +46,38 @@ quiz(
 )
 ```
 
-## Topic 1
+## What does it take? 
 
-### Exercise 
+Watch this video and then try to answer the questions below. 
 
-*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+![](https://www.youtube.com/watch?v=3m6p6w8oOw4)
 
-Write the R code required to add two plus two:
-
-```{r two-plus-two, exercise=TRUE}
-
-```
-
-### Exercise with Code
-
-*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
-
-Now write a function that adds any two numbers and then call it:
-
-```{r add-function, exercise=TRUE, exercise.lines = 5}
-add <- function() {
-  
-}
-```
-
-## Topic 2
-
-### Exercise with Hint
-
-*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
-
-Modify the following code to limit the number of rows printed to 5:
-
-```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
-mtcars
-```
-
-```{r print-limit-hint}
-head(mtcars)
-```
-
-### Quiz
-
-*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
-
-Some questions to verify that you understand the purposes of various base and recommended R packages:
-
-```{r quiz}
+```{r OpenScienceMeans}
 quiz(
-  question("Which package contains functions for installing other R packages?",
-    answer("base"),
-    answer("tools"),
-    answer("utils", correct = TRUE),
-    answer("codetools")
+  question("Open Science means ...", 
+           answer("making my publications available via open access"),
+           answer("making my results available"),
+           answer("making my data available"), 
+           answer("making my instruments and research designs available"), 
+           answer("making my data analysis process available"), 
+           answer("all of the above", correct = TRUE),
+           allow_retry = TRUE
   ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
+  question_text("What does the 'I' in FAIR principles stand for?" ,
+                answer("Interoperable", correct = TRUE),
+                answer("interoperable", correct = TRUE),
+                trim = TRUE,
+                allow_retry = TRUE
+                ),
+  question_text("Do you remember one of the characteristics of open science that start with an R? (Start with a capital R)", 
+           answer("Reproducible", correct = TRUE),
+           answer("Relevant", correct = TRUE),
+           answer("Reliable", correct = TRUE), 
+           answer("Reusable", correct = TRUE),
+           trim = TRUE, 
+           allow_retry = TRUE
   )
 )
 ```
+
 

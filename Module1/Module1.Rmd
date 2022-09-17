@@ -7,45 +7,56 @@ runtime: shiny_prerendered
 ```{r setup, include=FALSE}
 library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
+modules_overview <- 'learn-web.com:10033/openresearch'
 ```
+
 
 ## Welcome
 
-Welcome this module on making research open. My name is Peter Reimann and I'll be your guide through this topic. 
+```{r, out.width='50%', fig.align='right'}
+# knitr::include_graphics('https://librarianresources.taylorandfrancis.com/wp-content/uploads/2022/02/Choose-Open-Research-logo.jpg')
+```
 
-Best to get started with a short video: 
+Welcome this module on making research open. Here is what it covers:
+
+* point 1
+* topic 2
+* topic 3
+
+After working through this module, you should be able to ...
+
+Prerequisites: None. 
+
+
+Let's started with a short video: 
 
 ![](https://www.youtube.com/watch?v=iE7N3jgF4nU)
+
+Open research means in particular open data: 
+
+> "Data is open if it can be freely accessed, used, modified and shared by anyone for any purpose - subject only, at most, to requirements to provide attribution and/or share-alike. Specifically, open data is defined by the Open Definition and requires that the data be
+(a) legally open: that is, available under an open (data) license that permits anyone freely to access, reuse and redistribute; (b) technically open: that is, that the data be available for no more than the cost of reproduction and in machine-readable and bulk form.” From the  [Open Data Handbook](http://opendatahandbook.org/glossary/en/terms/open-data/)
+
+What does open data mean technically? This clip explains: 
+
+![](https://www.youtube.com/watch?v=frPFDAvc15Q)
+
+**Concerns?**
 
 A great idea, you might say! But what about...and about...? You will have some concerns. 
 
 
-## Concerns
-
-Open research means in particular open data: 
-
-"Data is open if it can be freely accessed, used, modified and shared by anyone for any purpose - subject only, at most, to requirements to provide attribution and/or share-alike. Specifically, open data is defined by the Open Definition and requires that the data be
-
-A. Legally open: that is, available under an open (data) license that permits anyone freely to access, reuse and redistribute
-
-B. Technically open: that is, that the data be available for no more than the cost of reproduction and in machine-readable and bulk form.” 
-[Open Data Handbook](http://opendatahandbook.org/glossary/en/terms/open-data/)
-
-What does machine-readable mean?
-
-![](https://www.youtube.com/watch?v=frPFDAvc15Q)
-
-
 ```{r concerns}
-quiz(
-  question("What concerns would you have concerning sharing data from your research?",
+  question("What concerns might you have concerning sharing data from your research?",
     answer("What does stop others from plagiarising my data?", correct = TRUE),
     answer("Wouldn't the privacy of my participants be at risk?", correct = TRUE),
-    answer("Other concerns", correct = TRUE)
+    answer("Other concerns", correct = TRUE),
+    allow_retry = TRUE
   )
-)
 ```
 
+These are all valid concerns. You are not the only one who has had them, and solutions have been developed. We will cover them later in detail. For the moment suffice to say that making research (data) open does not mean that you loose your intellectual property rights. To the contrary, by making your approach known early on, you don't have to rush your study.
+ 
 ## What does it take? 
 
 Watch this video and then try to answer the questions below. 
@@ -54,7 +65,7 @@ Watch this video and then try to answer the questions below.
 
 ```{r OpenScienceMeans}
 quiz(
-  question("Open Science means ...", 
+  question_radio("Open Science means ...", 
            answer("making my publications available via open access"),
            answer("making my results available"),
            answer("making my data available"), 
@@ -80,4 +91,184 @@ quiz(
 )
 ```
 
+## When research goes wrong
+
+There are many things that can go wrong in research--after all, researchers are only humans. The next video introduces three common problems. 
+
+> My video here
+
+**Reflection:** If you reflect on your own research project and your ways of working, do you think there might be situations where something could go wrong, as a consequence of motivated reasoning? 
+
+
+
+## Quality control through openness
+
+> goes here
+
+## What can you do about it - today? 
+
+You might say: All this is well and good, but where do I begin? It looks all so complicated. 
+
+There are two ways for getting started within a few minutes:
+
+* If you already have results and written about them, share a pre-print on ResearchGate.net or Academia.edu.
+* If you are at the beginning of the midst of your work, begin to share on Open Science Framework. 
+
+The fourth way to sharing is the most 'geeky' one, but it solves three problems: backup, versioning, and collaboration: Github. We'll provide an introduction in a separate module. 
+
+You can think of the three as having an increasing focus on collaboration, from Academia.edu (least collaboration oriented) over ResearchGate and OSF  to Github (most collaboration oriented). 
+
+### ResearchGate and/or Academia.org
+
+Both are straightforward to use and there's plenty of material avaible on the web and on youtube. You may want to read [this article](https://libraries.ou.edu/content/understanding-academiaedu-and-researchgate) for the difference between the two and some considerations before you use them (essentially, make sure you have the copyright for what you put up). 
+
+
+## Open Science Framework: Overview
+
+OSF is widely used by researchers from the behavioral sciences (psychology) and grew out of the [reproducability crisis](https://en.wikipedia.org/wiki/Replication_crisis) in (social) psychology. But its functionaoslity is useful for anybody conducting empirical research. 
+
+Let's start with a short overview: 
+
+![](https://www.youtube.com/watch?v=2TV21gOzfhw)
+
+You will need to make a decision if you want to use OSF as a collaboration tool--kind of like Github, but a bit less technical--or for sharing your data etc. with others so that they can potentially build on your work. 
+
+A detailed overview of the main functionality that OSF offers can be found in [this YouTube video](https://www.youtube.com/watch?v=_7FICg3as_M). Since it's 28  minutes long,we better split it into pieces (see next tabs). 
+
+Before you start watching the video, you may want to create an account on [osf.io](https://osf.io/) so that you can do some of the steps while following the video. If you get lost anywhere, check out the [OSF help pages](https://help.osf.io/). 
+
+## OSF: The project page
+
+#### Create a project (Minutes 00:00 -  01:52)
+
+It's best if you pause the video at the end of this segment below, for some reflections. 
+
+![](https://www.youtube.com/watch?v=_7FICg3as_M)
+
+So easy, you can do that yourself right away, after you created an account. 
+
+
+#### Project description and license (02:15 - 04:10 )
+
+Let's see if you got the main idea about licensing: 
+
+```{r osf-license}
+quiz(
+  question("Why should you contemplate a (content) license model?", 
+           answer("Like a driver's license, it shows that I know my way around osf.io."),
+           answer("Because it is important for me to get my work attributed and cited correctly.", correct=TRUE),
+           answer("For materials that I took freely from others I don't want to restrict use", correct=TRUE),
+           allow_retry = TRUE
+  ),
+  question("Which statements about licence models are correct?" ,
+                answer("CC0 1.0 Universal should always be chosen."),
+                answer("CC0 1.0 Universal should be chosen when I don't need attribution from others.", correct = TRUE),
+           answer("CC-By Attribution should be chosen only by vain people."),
+           answer("CC-By Attribution should be chosen when I acknowledgement of my intellectual ownership.", correct = TRUE),
+                allow_retry = TRUE
+                )
+)
+```
+
+#### The other project page elements (04:50 - 07:25)
+
+A key point here to keep in mind is that by default your project is private. Only people you explicitly invite to join it can see it. 
+
+Also important is that you cannot edit the *Activity Log*, neither the entry description nor the time stamps. Why is this a feature, not a bug? It is a feature because it makes the research process reproducible. It also helps to identify ownership. The time tag when you uploaded a first draft with findings can help evidencing your claim to intellectual ownership, for instance. But only if you can't edit the time stamp yourself. 
+
+## OSF: Managing projects
+
+Lets go more into details of projects. 
+
+
+#### Adding structure by adding components (07:26 - 10:00)
+
+
+```{r q_osf_comp}
+question("What makes components useful?",
+           answer("They divide a project into meaningful parts", correct=TRUE), 
+           answer("I can charge separately for each component"),
+           answer("I can control what gets shared and with whom on the component level", correct=TRUE),
+           answer("They help to divide word between project collaborators", correct=TRUE),
+           answer("They help people to find what they are looking for when viewing my project", correct=TRUE),
+           allow_retry = TRUE)
+```
+
+
+#### Inviting collaborators (10:01 - 12:10)
+
+Collaborators can be invited to the whole project or specific components, and they can have three kinds of rights: 
+ 
+* Read
+* Write
+* Administrate
+
+#### Adding content (12:23 - 17:35)
+
+Content creation works by uploading files to components and folders in components, and by editing content as long as it is plain text. 
+
+All content  files are under version control - changes to them (via edits or uploads) are noted and tracked. While version control has been mainly discussed in software engineering--the [Wikipedia article](https://en.wikipedia.org/wiki/Version_control) provides a thorough account--it is also important for managing changes to data and analytical code (e.g., SPSS and R scripts, definition of codes used in thematic analysis,etc.). It is  essential for **collaboration**, when multiple people work with the same data or contribute to the same document. It greatly increases **trust** in your data and analysis if all the documents and files involved are kept under (shared) version control; this way, others can re-trace your steps. Finally, it makes your data and analysis **better reusable** by others. 
+
+This is not the place to go into detail about versioning. For related modules see
+[modules overview](learn-web.com:10033/openresearch).  
+
+
+#### The wiki (17:40 - 20:20)
+
+Note that the wiki is version-tracked as well. The video mentions Markdown--pun intended--as the markup language that can be used for making the wiki text look nicer. No real need to worry about this now: You may neither need the wiki, or if you do, you can go a long way with plain text. But eventually you may want to learn more about Markdown, because it is ubiquotous in data science and web authoring (in particular on blog engines). (We note in parathesis that this learning object is a Markdown document, more precisely [RMarkdown](https://rmarkdown.rstudio.com/).) 
+
+There is plenty on the Internet for a first orientation:
+
+* https://www.markdownguide.org/getting-started/
+* A [30 minute tutorial]( https://medium.com/@taylorhxu/markdown-for-dummies-a24e982b8e85)
+* A 20 minute crash course on [YouTube](https://www.youtube.com/watch?v=HUBNt18RFbo)
+
+There are plenty of no-cost editors available on Macs and PCs for rendering a markdown document. If you this tutorial in RStudio, we already mentioned RMarkdown. To create you own first markdown document in RStudio, click on `File` > `New File` > `R Markdown`
+
+```{r open_rmd_gif,out.width='60%', out.height='60%'}
+knitr::include_graphics('http://www.learn-web.com:10033/openresearch/module01/rmarkdown_new_doc.gif')
+```
+
+
+
+#### Connecting to other files with add-ons (20:25 - 23:42)
+
+Not all your content needs to be saved on osf.io. You can link to Dropbox, Google Drive, Github etc., and also to accounts on Mendeley and Zotero, where you perhaps manage your references. See 
+[modules overview](learn-web.com:10033/openresearch) for avaibable learning objects. 
+
+#### Sharing the project beyond direct collaborators (23:45 - 25:30 )
+
+You learned that in addition to making project public there is also the option to make (components of) a project view-able with a `view-only link`. 
+
+```{r view_only_link}
+question("In what situations would you use this kind of link?",
+         answer("When I want to share (a part of) my project with a reviewer or editor.", 
+                correct = TRUE), 
+         answer("In general, when I want to share only a particular part of a private project
+                with an audience.", correct = TRUE),
+         answer("Under no circumstances"),
+         allow_retry = TRUE
+)
+```
+
+What a great feature! 
+
+
+#### Analytics (25:30 - 28:00)
+
+Analytics on the frequencies of views once a project went public. Very handy for documenting your impact in terms of [altmetrics](https://en.wikipedia.org/wiki/Altmetrics). Watch also the [modules overview](learn-web.com:10033/openresearch) for avaibable learning objects. 
+
+#### Registration
+
+Not part of this video, but needs to be at least mentioned. 
+
+https://help.osf.io/article/330-welcome-to-registrations
+
+
+## Additional materials 
+
+* Nosek, B. A., Spies, J. R., & Motyl, M. (2012). Scientific Utopia: II. Restructuring Incentives and Practices to Promote Truth Over Publishability. Perspectives on Psychological Science, 7(6), 615–631. https://doi.org/10.1177/1745691612459058
+* Publication bias. (2022, May 24). In Wikipedia. https://en.wikipedia.org/wiki/Publication_bias
+* OSF [basic functionality](www.youtube.com/watch?v=dLEIhJESIQA) (YouTube, 50 minutes) and [advanced functionality](https://www.youtube.com/watch?v=_7FICg3as_M) (YouTube, 30 minutes). 
+* [OSF help pages](https://help.osf.io/)
 
